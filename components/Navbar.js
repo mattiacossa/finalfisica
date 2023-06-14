@@ -6,6 +6,7 @@ import userData from "@constants/data";
 
 
 
+
 export default function Navbar() {
   const router = useRouter();
   console.log(router.asPath);
@@ -17,12 +18,12 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
-      <div className="flex  md:flex-row justify-between items-center">
+    <div className="qwertyq mx-auto px-4 ">
+      <div className="flex   md:flex-row justify-between items-center">
         <div className="flex flex-col">
   
           <div className="flex items-center">
-          <div className="qwerty">
+          <div className="riduzioneimmagine">
           <img src={userData.pollo}></img>
  
 </div>
@@ -30,9 +31,7 @@ export default function Navbar() {
     <h1 className="font-semibold text-xl dark:text-gray-100">
       {userData.name}
     </h1>
-    <p className="text-base font-light text-gray-500 dark:text-gray-300">
-      {userData.designation}
-    </p>
+    
   </div>
 </div>
 

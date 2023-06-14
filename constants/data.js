@@ -1,7 +1,7 @@
 const userData = {
   githubUsername: "mattiacossa",
-  name: "Polly, the climate thinker",
-  designation: "Una disuguaglianza insostenibile",
+  name: "FISICALIA",
+  designation: "Una fisica insostenibile",
   avatarUrl: "/avatar1.png",
   sfondoUrl: "/sfondo.png",
   avatarPiso: "/testwebsite.png",

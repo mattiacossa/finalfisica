@@ -16,8 +16,18 @@ a {
   text-decoration: none;
 }
 
-.qwerty {
-  width: 12vw;
+
+.block {
+  width: 200px;
+  height: 200px;
+  background-color: #ccc;
+  margin-right: 10px;
+  display: inline-block;
+}
+
+
+.riduzioneimmagine {
+  width: 7vw;
   margin-right: 3vw;
 }
 
@@ -408,7 +418,12 @@ padding-bottom: 40px;
             font-style: italic;
            }
 
-
+           .qwertyq {
+          background-color: white;
+          width: 100vw;
+     
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          }
           
 
                     .test1,
