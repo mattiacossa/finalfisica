@@ -2,7 +2,6 @@ import Head from "next/head";
 import React, { useState, useEffect } from "react";
 import styles from "../styles/Home.module.css";
 import ContainerBlock from "../components/ContainerBlock";
-import FavouriteProjects from "../components/FavouriteProjects";
 import LatestCode from "../components/LatestCode";
 import Hero from "../components/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
@@ -41,7 +40,7 @@ export default function Home({ repositories }) {
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Hero />
-      <FavouriteProjects />
+
       <LatestCode repositories={repositories} />
     </ContainerBlock>
   );
