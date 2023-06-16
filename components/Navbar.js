@@ -128,8 +128,8 @@ export default function Navbar() {
       
         </div>
       </div>
-      <div className="text-center spaziosopra">
-  <div className="space-x-8 block md:hidden mt-4">
+      <div>
+  <div className="space-x-8 block2 md:hidden mt-4">
     <Link
       href="/about"
       className="text-base font-normal text-gray-600 dark:text-gray-300"
