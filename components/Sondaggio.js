@@ -68,8 +68,8 @@ export default function FavouriteProjects() {
 
   
 
-  const userCollectionRef = collection(db, "DEFINITIVOdeidef")
-  const userCollectionRef2 = collection(db, "continua")
+  const userCollectionRef = collection(db, "fisica")
+  const userCollectionRef2 = collection(db, "fisicamail")
 
   const [position, setPosition] = useState(0);
   
@@ -234,11 +234,16 @@ const handleSubmit5 =(event) => {
 
   //colore secondario
  // <div className="block lg:hidden relative w-full md:w-1/2 -mr-40 mt-20">
- <div>
-    
 
-    <div className="complete">
-          <img src={userData.principale} alt="avatar" className="" />
+
+<div>
+    <div className="progress-bar-container">
+      <progress value={progress} max="100"></progress>
+    </div>
+
+    <div className="complete containerr">
+      
+          <img src={userData.attrito} alt="avatar" className="ridotto" />
           </div>
 
 
@@ -249,27 +254,24 @@ const handleSubmit5 =(event) => {
             
 
 
-          <div className="bg-[#395756] dark:bg-gray-900">
-      <div>
+        
+            
+      
       
         <header className="flex-row md:flex-row justify-between items-center pt-20 mx-2 md:mx-20 lg:my-0">
       
    
-        <div className="borderblue"> 
+
    
-          <div className="text-gray-700 p-2 pt-10 pb-10 md:p-20">
+         
  
 
-          <div className="progress-bar-container">
-      <progress value={progress} max="100"></progress>
-      
-    </div>
 
 
      
 
 
-  <div className="mt-6 bordergeneral">
+  <div className="mt-6 ">
  
 
  
@@ -277,17 +279,40 @@ const handleSubmit5 =(event) => {
 
       {step === 1 && (
         <form onSubmit={handleSubmit6}>
-      <div className="mt-3 grande texttt grande">
-        <h1 className="font-medium centrale inferiore2">Polly ha fame! </h1>
-
+          <div className="containerr">
+      <div className="mt-3 bordosinistro">
+      
         
      
-   <h1 className="centrale">
-       Il sondaggio è completamente anonimo, le risposte inserite sono memorizzate esclusivamente per fini di ricerca.
-        </h1>
-    <button type="submit" className="bottoneprimario">SALVIAMO POLLY!</button>
+       
+            <p
+              className="leading-loose text-2xl md:text-3xl font-semibold text-gray-800"
+
+            >
+      È tutta logica
+              
+              </p>
+
+              <p
+              className="leading-loose text-1xl md:text-1xl text-gray-800"
+              style={{lineHeight: "30px"}}
+            >
+     In questo corso esplorerai le basi fondamentali della fisica e i principi dell'ingegneria attraverso enigmi e giochi.
+
+Gli enigmi di questo capitolo si concentrano su massa, forza peso e forza opprimente (attrito). Mentre li risolvi, dovresti essere alla ricerca di schemi: principi generali che puoi utilizzare per fare previsioni nel mondo reale.
+
+Questo è ciò che significa pensare come uno scienziato.
+              
+              </p>
+
+
+
+
+    <button type="submit" className="bottoneprimario">Inizia il corso :)</button>
      
 
+
+</div>
 
 </div>
 
@@ -304,7 +329,15 @@ const handleSubmit5 =(event) => {
       <div className="mt-3">
       <div class="container">
         <label htmlFor="range" className="grande textt block font-medium text-sm text-gray-700 mb-2">
-Secondo te, è incorso un cambiamento climatico?
+        Chi è il misterioso personaggio che ha una massa di 80 kg ma un peso di 130 N?
+
+
+Mario, l’astronauta
+
+Luigi, il nuotatore
+
+Beppe, il capotreno 
+
 
         </label>
         </div>
@@ -763,8 +796,8 @@ Secondo te, è incorso un cambiamento climatico?
 
 
     </div>
-  </div>
-</div>
+ 
+
 
 
 
@@ -779,8 +812,8 @@ Secondo te, è incorso un cambiamento climatico?
          
           
         </div>
-      </div>
-    </div>
+   
+   
 
    
 

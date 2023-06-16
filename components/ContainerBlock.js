@@ -50,7 +50,7 @@ export default function ContainerBlock({ children, ...customMeta }) {
       </Head>
 
  
-      <main className="bg-[#eaf0ea] w-full">
+      <main className="bg-[#ffffff] w-full">
         <Navbar />
         <div>{children}</div>
         <Footer />

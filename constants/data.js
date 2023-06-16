@@ -5,6 +5,7 @@ const userData = {
   avatarUrl: "/avatar1.png",
   sfondoUrl: "/sfondo.png",
   avatarPiso: "/testwebsite.png",
+  attrito: "/attrito.png",
   notizia1: "/terzonegativox.png",
   sfondo2Url: "/sfondo2.png",
   principale: "/sfondofinale1.png",
