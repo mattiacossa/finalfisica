@@ -1,6 +1,6 @@
 import React,{ useState, useEffect } from "react";
 import ContainerBlock from "../components/ContainerBlock";
-import Sondaggio from "../components/Sondaggio";
+import Sondaggio from "../components/Sondaggio2";
 import styles from "../styles/Home.module.css";
 
 import 'katex/dist/katex.min.css';

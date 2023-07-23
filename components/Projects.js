@@ -37,12 +37,7 @@ export default function Projects() {
               className="leading-loose text-1xl md:text-1xl font-semibold mx-4 text-center text-gray-800"
               style={{lineHeight: "20px"}}
             >
-     In questo corso esplorerai le basi fondamentali della fisica e i principi dell'ingegneria attraverso enigmi e giochi.
-
-Gli enigmi di questo capitolo si concentrano su massa, forza peso e forza opprimente (attrito). Mentre li risolvi, dovresti essere alla ricerca di schemi: principi generali che puoi utilizzare per fare previsioni nel mondo reale.
-
-Questo è ciò che significa pensare come uno scienziato.
-              
+       
               </p>
 
 

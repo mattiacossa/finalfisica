@@ -6,6 +6,7 @@ import LatestCode from "../components/LatestCode";
 import Hero from "../components/Hero";
 import getLatestRepos from "@lib/getLatestRepos";
 import userData from "@constants/data";
+import 'katex/dist/katex.min.css';
 
 export default function Home({ repositories }) {
   const [loading, setLoading] = useState(true);

@@ -4,18 +4,19 @@
     font-display: swap;
     font-style: normal;
     font-named-instance: 'Regular';
-    src: url('../fonts/Inter-roman-latin.var.woff2') format('woff2');
+    src: url('../fonts/SoleilRegular.otf') format('woff2');
   }
   
   @font-face {
     font-family: 'Inter var';
-    font-weight: 100 900;
+    font-weight: 600 900;  /* 600 is typically used for semibold fonts */
     font-display: swap;
-    font-style: italic;
-    font-named-instance: 'Italic';
-    src: url('../fonts/Inter-italic-latin.var.woff2') format('woff2');
-  }
-  
+    font-style: normal;
+    font-named-instance: 'SemiBold';
+    src: url('../fonts/SoleilBold.otf') format('woff2');  /* This assumes you have the semibold font file */
+}
+
+
   @font-face {
     font-family: 'Source Sans Pro';
     font-style: normal;

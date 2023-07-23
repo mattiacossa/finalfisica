@@ -18,7 +18,7 @@ export default function Navbar() {
   }, []);
 
   return (
-    <div className="qwertyq mx-auto px-4 ombrasotto">
+    <div className="qwerty mx-auto px-4 ombrasotto">
       <div className="flex   md:flex-row justify-between items-center contorno">
         <div className="flex flex-col">
   

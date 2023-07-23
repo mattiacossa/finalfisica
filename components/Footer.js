@@ -4,7 +4,7 @@ import userData from "@constants/data";
 export default function Footer() {
   return (
     <div className="bg-[#ffffff] dark:bg-gray-900">
-<img src={userData.allora}></img>
+
       <div className="max-w-6xl  mx-auto px-4 py-10 md:py-20">
   
 
