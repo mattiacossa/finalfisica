@@ -3,59 +3,141 @@
 @tailwind utilities;
 
 @import 'fonts.css';
+@import url('https://fonts.googleapis.com/css2?family=Kablammo&family=Tinos:wght@400;700&display=swap');
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: 'Inter var', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
-    Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Inter var';
 }
 a {
   color: inherit;
   text-decoration: none;
 }
 
-.containerr {
-  display: flex;
-  justify-content: center;
+/* Hide the browser's default radio button */
+.hidden {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
 }
 
-.block {
-  margin: 10px; /* Adjust the margin as needed */
-  border: solid 10px red;
-  width: 90vh;
-  padding: 20px;
+
+
+/* Create a custom radio button */
+.checkmark {
+  position: relative;
+  border: 1px solid #ccc;
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  cursor: pointer;
 }
+
+/* Create the indicator (hidden when not checked) */
+.checkmark::before {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (tick) when checked */
+.checkmark.checked::before {
+  display: block;
+  content: '\2713';
+  color: green;
+  font-size: 20px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+
+.containerr {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.image-container {
+  order: 1;
+}
+
+.bordosuperiore {
+  padding-top: 20px;
+}
+
+
+.bordosinistro {
+  order: 2;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .containerr {
+    flex-direction: row;
+  }
+  
+  .image-container {
+    order: 2;
+  }
+
+  .bordosinistro {
+    order: 1;
+  }
+}
+
+.bordospaziatore {
+  padding-top: 20px;
+}
+
+
+
+.block3 {
+  display: block;
+  width: 90%;
+}
+
+
 .block2 {
-  margin: 10px; /* Adjust the margin as needed */
 
   padding: 20px;
 }
 
 .bordosinistro {
-  width: 80vh;
-  border: solid 10px red;
+  width: 100%;
 }
 
-.contorno  {
-  border: solid 10px black;
-}
 
 .ombrasotto {
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
-margin-bottom: 10px;
+
 }
 
 .ridotto {
-  height: 40vh;
+  width:70%; /* you can use % */
+  height: auto;
 }
 
 
+.immaginesecondo {
+  background-color: black;
+  width: 100%;
+}
 
 
-
-
+.altezzamassima {
+  height: 100vh;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 .riduzioneimmagine {
@@ -63,435 +145,222 @@ margin-bottom: 10px;
   margin-right: 3vw;
 }
 
-.sottot {
-padding-top: 20px;
-}
-
 
 * {
   box-sizing: border-box;
 }
 
-.ciao {
-
-margin-top: -8px;
-}
-
-
-.colore {
-
-  margin-top: -8px;
-  }
-  
-  .intenso {
-  background-color: #e8efe9
-   }
-
   .complete {
    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid 10px green; 
+    height: 100%;
   }
+  
   
   .radio-button {
     display: flex;
     flex-direction: row;
     align-items: center;
-padding-bottom: 30px;
-padding-left: 20px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+
   }
   
+  .marginesinistro {
+    margin-left: 100px;
+  }
+
+
+  .tasto {
+    display: flex;
+  }
+
+
   .radio-button input[type="radio"] {
     appearance: none;
     -webkit-appearance: none;
-    width: 1rem;
-    height: 1rem;
+    width:2rem;
+    height: 2rem;
     border: 1px solid #000;
-    border-radius: 0;
- margin-right: 10px;
+    border-radius: 50%; /* Change border-radius to 50% for a circular shape */
+    margin-right: 10px;
     padding: 0;
     outline: none;
     cursor: pointer;
+    
   }
   
-
   .radio-button input[type="radio"]:checked {
     background-color: #000;
   }
   
   .radio-button input[type="radio"]:hover:not(:checked) {
     background-color: #ccc;
+    border-radius: 20px; /* Optional: Add border-radius here if you want a rounded hover effect */
+  }
+  
+
+.bordoalto {
+padding-top: 20px;
+
   }
 
-  .sotto {
+
+
+.space {
+  padding-top: 20px; 
+}
+
+         
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textt {
+    text-align: left;
     padding-bottom: 30px;
-  }
+    padding-top: 10px;
+}
 
-  .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 10px;
-    background: linear-gradient(to right, #C0D7BB, #2F4B26);
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
+ 
+.grande {
+  font-size: 1.3em;
+  line-height: 1.2;
   }
-  
-  .slider:hover {
-    opacity: 1;
+          
+           
+.hidden {
+  visibility: hidden;
+  position: absolute;
   }
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    border-radius: 2px;
-    background: #153243;
-    cursor: pointer;
+          
+.custom-radio {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: relative;
+  border: 2px solid #000;
+  margin-right: 10px;
   }
-  
-  .slider::-moz-range-thumb {
+          
+.custom-radio.selected {
+    background: #000; /* Black color when selected */
+  }
+          
+.result-indicator {
+    display: inline-block;
     width: 20px;
     height: 20px;
-    background: #ff00cc;
-    cursor: pointer;
+    border-radius: 50%;
+    margin-right: 10px; /* Some spacing from the radio button */
+    background: grey; /* Grey color before form is submitted */
+    }
+          
+.result-indicator.correct {
+  background: green; /* Green color when the answer is correct */
   }
-  .borderblue {
-
-background-color:white;
-padding-top:20px;
-padding-bottom:20px;
-border-radius: 2px;
-border: solid 2px rgba(164, 196, 164, 0.5);
-    }
-    
-    .bordergeneral {
-
-      background-color: white;
-      padding:20px;
-      border-radius: 2px;
-      border: solid 2px #a4c4a4;
-      box-shadow: 4px 4px 0px #999;
-          }
-
-
-         
-          .container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            
-           
-          }
           
-          .textt {
-            text-align: left;
-            padding-bottom: 30px;
-            padding-top: 10px;
-         
-          }
-
-          .texttt {
-            text-align: left;
-
-            padding-top: 10px;
-         
-          }
-         
-      
-          .grande {
-           font-size: 1.5em;
-           line-height: 1.2;
-           
-         
-          }
-
-
-          .image-wrapper {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-          }
-          .image-wrapper img {
-            margin-right: 10px; /* add some space to the right of the image */
-          }
-
+.result-indicator.incorrect {
+  background: red; /* Red color when the answer is incorrect */
+  }
           
-          .svgg {
-            width: 50px;
-            height: 50px;
-            margin-right: 10px;
-            margin-left: auto;
-margin-top: 0px;
-
-          }
-
-
-          .note {
-           display:flex;
-
-    justify-content: flex-end;
-                }
-
-               
-          .bottoneprimario {
-            background-color: #38a169;
-            box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
-            font-size: 1rem;
-            color: #fff;
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem;
-            margin-top: 1.5rem;
-            border-radius: 0.5rem;
-            width: 100%;
-            
-         
-                }
-
-                .progress-bar-container {
-                  width: 100%;
-                  margin: 0 auto;
-            padding-left: 20px;
-            padding-right: 20px;
-
-                  text-align: center;
-    
-                }
-                
-                /* Style the progress bar */
-                progress {
-                  width: 100%;
-                  border: none;
-                  background-color: #eee;
-                  border-radius: 10px;
-                }
-                
-                /* Style the progress bar track */
-                progress::-webkit-progress-bar {
-                  border-radius: 10px;
-                }
-                
-                /* Style the progress bar value */
-                progress::-webkit-progress-value {
-                  background-color: #6db65b;
-                  border-radius: 10px;
-                }
-            
-                
-
-                
-
-
-                .bottoneprimario1 {
-                  background-color: #38a169;
-
-            font-size: 1rem;
-            color: #fff;
-            padding-top: 0.75rem;
-            padding-bottom: 0.75rem;
-margin-left: 10px;
-            border-radius: 1rem;
-            width: 50px;
-                  }
-                  
-               
-              
-          
-
-  .sposta {
-
-margin-right: 20px;
-padding-right: 10px;
-
-    }
-
-
-    
+.result-indicator.unsubmitted {
+  background: grey; /* Grey color before form is submitted */
+  }
   
-   
-    .gotopolly  {
 
-        
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 20px;
-      }
-    
-      .bordo  {
-
-        
-       border: solid 10px red;
-            }
-          
-          .gotopolly button {
-
-        
-  
-            background-color: #313B72; /* Colore di sfondo */
-            
-            color: #fff; /* Colore del testo */
-            border: 1px solid #313B72; /* Stile del bordo */
-            padding: 10px 20px; /* Spaziatura interna */
-            border-radius: 5px; /* Angoli arrotondati */
-            text-decoration: none; /* Rimuovi la sottolineatura del testo */
-            font-size: 16px; /* Dimensione del testo */
-            cursor: pointer; /* Cambia il cursore del mouse */
-            }
-          
-    .centrale {
-      text-align: center;
-      line-height: 32px;
-    }
-
-    .inferiore {
-margin-bottom: 13px;
-padding-top: 100px;
-
-
-
-    }
-
-    .inferiore2 {
-      margin-bottom: 13px;
-   
-      
-      
-      
-          }
-      
-
-
-    .icon-container {
-      display: flex;
-      align-items: center;
-      margin-left: 0.5rem; /* adjust as needed */
-    }
-
-    .inputt{
-      display: block;
+.grigio {
+  background-color: #f6f7f7;
+  border-radius: 10px;
+  padding: 20px;
+  }
  
-      border-radius: 20px;
-      padding: 10px;
-      background-color: #fff;
-      color: #333;
-      font-size: 16px;
-      width: 50vw;
-      margin: 0 auto; /* Center horizontally */
-      height: 60px;
-    
-    }
+
+  .bordoalto {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+ 
+
+.bottoneprimario {
+  background-color: black;
+  font-size: 1rem;
+  color: #fff;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  width: 30%;
+}
 
 
-    .spostaa{
-    margin-left: 40px;
-      
-          }
+.bottonesecondario {
+      background-color: black;
+      font-size: 1rem;
+      color: #fff;
+      padding-top: 0.75rem;
+      padding-bottom: 0.75rem;
+      border-radius: 0.5rem;
+      width: 200%;
+}
 
-    .img {
-      pointer-events: none;
-      }
 
-      .linea {
-      padding-top: 30px;
-padding-left: 50px;
-padding-right: 50px;
-padding-bottom: 40px;
-        }
 
-        .linea2 {
-          
-  text-align: center;
-           }
+.spazioinalto {
+  padding-top: 80px;
+  }
+
   
 
-           .spaziosopra {
-          
-            padding-top: 15px;
-                     }
-            
 
-           .linea3 form {
-            display: flex;
-            align-items: center;
-          }
+  .bordo {
+    border: solid 4px green;
 
-
-          .linea4  {
-           padding-bottom: 50px;
-          }
-
-          .linea5  {
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-bottom: 50px;
-           }
-           
-
-           .linea6  {
-            padding-top:40px;
-           }
-           .sopraspazio  {
-            padding-top:40px;
-           }
+  }
 
 
 
 
-           .linea7  {
-        
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-bottom: 60px;
-           }
-
-           
-
-           .qwerty  {
-            font-style: italic;
-           }
-
-           .qwertyq {
-         
-          width: 100vw;
-          place-items: center;
-     
-        
-          }
-          
-
-                    .test1,
-                    .test2 {
-                      display: inline-block;
-                      vertical-align: middle;
-                    }
-
-    
 
 
-      .biglietto {
-        background: linear-gradient(to bottom, #27474E, #A4C2A8, #aac4a7);
-      }
-
-      .sopra {
-padding-top: 50px;
-padding-bottom: 10px;
-
-      }
+.myriam {
+  padding: 4px;
+  border: solid 2px red;
+  border-radius: 10px;
+}
 
 
+/* Style the progress bar track */
+progress::-webkit-progress-bar {
+  background-color: #e5e6e6; /* The slider color is now yellow */
+  border-radius: 5px;
+}
+
+/* Style the progress bar value */
+progress::-webkit-progress-value {
+  background-color: #676969;
+  border-radius: 5px;
+}
+
+.icon-container {
+  display: flex;
+  align-items: center;
+  margin-left: 0.5rem; /* adjust as needed */
+}
 
 
-      .margine {
-       padding-left: 10px;
-       scroll-padding-right: 10px;
-      }
+.img {
+  pointer-events: none;
+}
 
 
-
-    .hola {
- border: solid 10 px red;
- height: 200px;
-      }
-  
- 
- 
+.qwerty {
+  width: 100vw;
+  place-items: center;
+}
